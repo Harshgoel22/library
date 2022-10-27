@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>workspace</title>
+
+        <!--local css files-->
+        <link rel="stylesheet" href="/css/list.css">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Abel&family=Cairo:wght@500&family=Cookie&family=Dancing+Script:wght@600&family=Satisfy&display=swap" rel="stylesheet">
+    
+    </head>
+    <body>
+        <section id="intro-section">
+                
+            <!-- navbar-->
+                <nav class="navbar navbar-expand-lg navbar-dark">
+                    <div class="container-fluid">
+                        <img src="../images/Logo1.png" alt="_logo" id="kh">
+                        <p class="navbar-brand">Knowledge Hub</p><br><br>
+                        <small id="navbar-brand-small">by IIIT Sonepat</small>
+
+                        <div id="navbar-nav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a href="/" class="nav-link link1">HomePage</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </nav>
+                
+                <%if(succ===false && validLogin===false){%>
+                    <div id="intro-div">
+                        <h1>Error</h1>
+                    </div>
+                <%}%>
+                   
+        </section>
+        <section id="content">
+            <%if(validLogin){%>
+                <h1 class="success">Welcome back! <%= full_name %></h1>
+            <%}if(succ){%>
+                <h1 class="success">Registered Successfully!</h1>
+            <%}if(check_nully){%>
+                <h2>Sorry! You have left any of the blank empty.</h2>
+            <%}if(check_pass){%>
+                <h2>Sorry! You have entered wrong password.</h2>
+            <%}if(userpass){%>
+                <h2>Sorry! Username already taken.</h2>
+            <%}if(validUser){%>
+                <h2>Sorry! Username does not exists.</h2>
+            <%}%>
+
+        </section>
+    </body>
+</html>

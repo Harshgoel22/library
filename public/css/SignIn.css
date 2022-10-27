@@ -1,0 +1,145 @@
+/*.container {
+    margin: auto ;
+    height: 1600px;
+    width: 80%;
+    
+}
+
+#bks {
+    width: 100%;
+    height: 590px;
+}
+
+input {
+    width: 85%;
+    padding: 10px;
+    margin-top: 25px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #b0b3b9;
+}
+
+
+#si-content {
+    width: 40%;
+    padding: 7%;
+    
+}
+
+td {
+    border: 2px solid black;
+}
+
+#login-content h5 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+}
+
+.btn {
+    box-shadow: 0 10px 30px 0 #DAA06D;
+    width: 140px;
+    height: 50px;
+    background-image: linear-gradient(135deg,#E97451 60%,#A52A2A 90%, #800020 100%);
+    transition: transform 2s;
+}
+
+.btn:hover {
+    animation: anim1 200ms ease-in-out alternate forwards;
+    transform: scale(1.15);
+}
+
+@keyframes anim1 {
+    0%{
+        background-image: linear-gradient(135deg,#E97451 98%,#A52A2A 99%, #800020 100%);
+        
+    }
+
+    25%{
+        background-image: linear-gradient(135deg,#E97451 76%,#A52A2A 95%, #800020 100%);
+        
+    }
+
+    50%{
+        background-image: linear-gradient(135deg,#E97451 56%,#A52A2A 90%, #800020 100%);
+        
+    }
+
+    75%{
+        background-image: linear-gradient(135deg,#E97451 36%,#A52A2A 85%, #800020 100%);
+        
+    }
+
+    100%{
+        background-image: linear-gradient(135deg,#E97451 16%,#A52A2A 80%, #800020 100%);
+        
+    }
+}
+*/
+
+.container {
+    margin: auto ;
+    height: 1000px;
+    width: 80%;
+    
+}
+
+#bks {
+    width: 100%;
+    height: 590px;
+}
+
+#signup-content {
+    width: 70%;
+    padding: 7%;
+    
+}
+
+td {
+    border: 2px solid black;
+}
+
+#login-content h5 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+}
+
+.btn {
+    box-shadow: 0 10px 30px 0 #DAA06D;
+    width: 140px;
+    height: 50px;
+    background-image: linear-gradient(135deg,#E97451 60%,#A52A2A 90%, #800020 100%);
+    transition: transform 2s;
+}
+
+.btn:hover {
+    animation: anim1 200ms ease-in-out alternate forwards;
+    transform: scale(1.15);
+}
+
+@keyframes anim1 {
+    0%{
+        background-image: linear-gradient(135deg,#E97451 98%,#A52A2A 99%, #800020 100%);
+        
+    }
+
+    25%{
+        background-image: linear-gradient(135deg,#E97451 76%,#A52A2A 95%, #800020 100%);
+        
+    }
+
+    50%{
+        background-image: linear-gradient(135deg,#E97451 56%,#A52A2A 90%, #800020 100%);
+        
+    }
+
+    75%{
+        background-image: linear-gradient(135deg,#E97451 36%,#A52A2A 85%, #800020 100%);
+        
+    }
+
+    100%{
+        background-image: linear-gradient(135deg,#E97451 16%,#A52A2A 80%, #800020 100%);
+        
+    }
+}

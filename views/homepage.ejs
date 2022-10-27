@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+ 
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="../css/homepage.css">
+    <!-- Icon JS -->
+    <script src="https://kit.fontawesome.com/4dce69f05e.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Cairo:wght@500&family=Cookie&family=Dancing+Script:wght@600&family=Satisfy&display=swap" rel="stylesheet">
+    <title>Library</title>
+    
+</head>
+
+<body>
+
+    <section id="intro-section">
+                
+
+        <!--navbar-->
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                
+                <img src="../images/Logo1.png" alt="_logo" id="kh">
+                <p class="navbar-brand">Knowledge Hub</p><br>
+                <small id="navbar-brand-small">by IIIT Sonepat</small>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <button class="btn btn-outline-light btn-lg xpand" data-toggle="modal" data-target="#signinmodal"> 
+                                <i class="fa-solid fa-right-to-bracket"></i> <span>Sign In</span>
+                            </button>
+                            <!--Modal start-->
+                            <div class="modal fade" id="signinmodal">
+                                <div class="modal-dialog modal-dialog-centered modal-xl" style="height: 600px;width: 1300px;">
+                                    <div class="modal-content">
+                                        <div class="container-login">
+                                            <table>
+                                                <tr>
+                                                    <td>
+                                                        <img src="../images/bks.jpg" alt="bks" id="bks">
+                                                    </td>
+                                                    <td id="login-content">
+                                                        <button class="close toprt" data-dismiss="modal">
+                                                            <span>&times;</span>
+                                                        </button>
+                                                        <h1>Login</h1>
+                                                        <p>Don't have an account? <a href="#"> Sign Up</a> already <br> in less than a minute!</p><br>
+                                                        
+                                                        <form action="/post" method="post">
+                                                            <div class="form-group">
+                                                                <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input" type="radio" name="Member" id="user" value="user"><Span>User</Span>
+                                                                    <input class="form-check-input" type="radio" name="Member" id="student" value="student"><Span>Student</Span>
+                                                                    <input class="form-check-input" type="radio" name="Member" id="admin" value="admin"><Span>Admin</Span>
+                                                                </div><br><br>
+                                                                <input type="text" class="form-control" name="username" id="username" placeholder="Username"><br>
+                                                                <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+
+                                                                <br><br><a href="" id="frgtme">Forget Password?</a><br><br>
+                                                                <button class="btn btn-outline-dark btn-lg">Login</button>
+                                                            </div>                                                            
+                                                        </form>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!--Modal-end-->
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" class="btn btn-outline-light btn-lg xpand" data-toggle="modal" data-target="#signupmodal"> 
+                                <i class="fa-solid fa-user"></i> <span>Sign Up</span>
+                            </button>
+                            <div class="modal fade" id="signupmodal">
+                                <div class="modal-dialog modal-dialog-centered modal-xl" style="width: 2000px;">
+                                    <div class="modal-content">
+                                        <div class="container-signup">
+                                            <table>
+                                                <tr>
+                                                    <td>
+                                                        <img src="../images/bkss.png" alt="bks" id="bks">
+                                                    </td>
+                                                    <td id="signup-content">
+                                                        <button class="close toprt" data-dismiss="modal">
+                                                            <span>&times;</span>
+                                                        </button>
+                                                        <h3>Knowledge Hub</h3>
+                                                        <h1>Create New Account</h1>
+                                                        <form action="/list" method="post">
+                                                            <div class="form-row">
+                                                                <div class="form-group col-lg-6">
+                                                                  <small>First Name:</small>
+                                                                  <input type="text" class="form-control" id="fname" name="fname" placeholder="First Name">
+                                                                </div>
+                                                                <div class="form-group col-lg-6">
+                                                                    <small>Last Name:</small>
+                                                                  <input type="text" class="form-control" id="lname" name="lname" placeholder="Last Name">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <small>Email-ID:</small>
+                                                                <input type="text" class="form-control" id="email" name="email" placeholder="Enter Email-ID">
+                                                            </div>
+                                                            <div class="form-row">
+                                                                <div class="form-group col-lg-6">
+                                                                    <small>Date of Birth:</small>
+                                                                    <input type="date" class="form-control" id="DOB" name="dob" placeholder="Enter Birth Date">
+                                                                </div>
+                                                                <div class="form-group col-lg-6">
+                                                                    <small>Gender:</small><br>
+                                                                    <div class="form-check form-check-inline">
+                                                                        <input class="form-check-input" type="radio" id="male" name="gender" value="Male"><Span>Male</Span>
+                                                                        <input class="form-check-input" type="radio" id="female" name="gender" value="Female"><Span>Female</Span>                                
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <small>Username:</small>
+                                                                <input type="text" class="form-control" id="username" name="username" placeholder="Enter Username">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <small>Password:</small>
+                                                                <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <small>Confirm Password:</small>
+                                                                <input type="password" class="form-control" id="cpassword" name="cpassword" placeholder="Re-enter Password to Confirm">
+                                                            </div>
+                                                            <button class="btn btn-outline-dark btn-lg ml-auto">Register</button>
+                                                        </form>                                    
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </li>                 
+                    </ul>
+                </div>        
+
+            </nav>
+            <div id="intro-div">
+                <h1>Welcome to our Library <br> <span>Knowledge Hub</span> </h1><br>
+            </div>
+            
+    </section>
+
+    <section id="features">
+                <div class="row">
+                    <div class="col-lg-4 feature">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <h3>Short and crisp notes !</h3>
+                        <p>Best quality and easy to comprehend graduation notes at fingertips</p>
+                    </div>
+                    <div class="col-lg-4 feature">
+                        <i class="fa-solid fa-book"></i>
+                        <h3>Wide range of genres available !</h3>
+                        <p>A great variety of admirable books catering to everyone's tastes</p>
+                    </div>
+                    <div class="col-lg-4 feature">
+                        <i class="fa-solid fa-circle-play"></i>
+                        <h3>Comprehensive Video Lectures !</h3>
+                        <p>Topic-wise video lectures to facilitate better learning</p>
+                    </div>
+                </div>
+
+    </section>
+    <section id="bestseller">
+        <div id="trending-books" class="carousel slide" data-ride="carousel" data-interval="1500" data-pause="hover">
+            
+            <ol class="carousel-indicators">
+                <li data-target="#trending-books" data-slide-to="0" class="active"></li>
+                <li data-target="#trending-books" data-slide-to="1"></li>
+                <li data-target="#trending-books" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <p>Our Bestsellers !!</p>
+                <div class="carousel-item active">
+                    <div class="bookcrsl" id="bk1">
+                        <table>
+                            <tr>
+                                <td class="bookimg" rowspan="2">
+                                    <img src="../images/IOM.jpg" alt="IOM" >
+                                </td>
+                                <td class="bookdsc">
+                                    <h1>IMMORTALS OF MELUHA</h1>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button class="btn btn-outline-dark">CHECK OUT !</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="bookcrsl" id="bk2">
+                        <table>
+                            <tr>
+                                <td class="bookimg" rowspan="2">
+                                    <img src="../images/DOWK_RR.jpg" alt="DOWK" >
+                                </td>
+                                <td class="bookdsc">
+                                    <h1>DIARY OF A WIMPY KID: RODRICK RULES</h1>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button class="btn btn-outline-dark">CHECK OUT !</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="bookcrsl" id="bk3">
+                        <table>
+                            <tr>
+                                <td class="bookimg" rowspan="2">
+                                    <img src="../images/TN.jpg" alt="TN" >
+                                </td>
+                                <td class="bookdsc">
+                                    <h1>THE NOTEBOOK</h1>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button class="btn btn-outline-dark">CHECK OUT !</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="creators">
+        <br><br><h2 id="crtr-hdng"><strong>Created by:</h2>
+        <div class="row crtr">
+            <div class="col-lg-4 feature">
+                <img src="../images/sameer_pd.jpg" alt="hrsh" class="crtr-pic"><br>
+                <h3 class="crtr-nm">Sameer Pandya</h3>
+                <a href="https://www.instagram.com/_sameer_1002/" target="_blank"><i class=" crtr-lgo fa-brands fa-instagram"></i></a> 
+                <a href="https://www.linkedin.com/in/sameer-pandya-21b147229/" target="_blank"><i class="crtr-lgo fa-brands fa-linkedin"></i></a>
+            </div>
+            <div class="col-lg-4 feature">                
+                <img src="../images/abhi_sriv.jpg" alt="hrsh" class="crtr-pic"><br>
+                <h3 class="crtr-nm">Abhinav Srivastav</h3>
+                <a href="https://www.instagram.com/srivastavabhinav_100/" target="_blank"><i class=" crtr-lgo fa-brands fa-instagram"></i></a> 
+                <a href="https://www.linkedin.com/in/abhinav-srivastav-77380a229/" target="_blank"><i class="crtr-lgo fa-brands fa-linkedin"></i></a>
+            </div>
+            <div class="col-lg-4 feature">
+                <img src="../images/harsh_goel.jfif" alt="hrsh" class="crtr-pic"><br>
+                <h3 class="crtr-nm">Harsh Goel</h3>
+                <a href="https://www.instagram.com/harsh.goel.22/" target="_blank"><i class=" crtr-lgo fa-brands fa-instagram"></i></a> 
+                <a href="https://www.linkedin.com/in/harsh-goel-47a0b5226" target="_blank"><i class="crtr-lgo fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="footer">
+        <br><br><br>
+        This website is created by Sameer, Abhinav and Harsh. We are students of IT branch, 3rd Semester in IIIT Sonepat institute. <br> 
+        If you wish to contact us for any issue related to our website, you can contact us on this Gmail ID: <a href="mailto:practicum.team3@gmail.com">practicum.team3@gmail.com</a>
+        <br><br>
+        Provide us your valuable Feedback <a href="#">here</a> 
+        <br><br>
+        ⓒ Copyright 2022. All rights reserved.
+        <br><br><br>
+    </section>
+    
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="homepage.js"></script>
+</body>
+
+</html>
+

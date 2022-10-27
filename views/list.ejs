@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>list</title>
+
+        <!--local css files-->
+        <link rel="stylesheet" href="/css/list.css">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Abel&family=Cairo:wght@500&family=Cookie&family=Dancing+Script:wght@600&family=Satisfy&display=swap" rel="stylesheet">
+    
+    </head>
+    <body>
+        <section id="intro-section">
+                
+            <!-- navbar-->
+                <nav class="navbar navbar-expand-lg navbar-dark">
+                    <div class="container-fluid">
+                        <img src="../images/Logo1.png" alt="_logo" id="kh">
+                        <p class="navbar-brand">Knowledge Hub</p><br><br>
+                        <small id="navbar-brand-small">by IIIT Sonepat</small>
+
+                        <div id="navbar-nav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a href="/" class="nav-link link1">HomePage</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link link2">About Us</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </nav>
+                
+                <div id="intro-div">
+                    <h1>Registered Users List</h1>
+                </div>
+                   
+        </section>
+
+        <section id="list">
+
+            <%if(list.length===0){%>
+                <h1 id="cond-trig1">No Registered User</h1>
+            <%}%>
+            <%if(list.length > 0){%>
+                <div class="user-record">
+                    <table>
+                        <tr>
+                            <th>Id</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Date of Birth</th>
+                            <th>Gender</th>
+                            <th>Email Id</th>
+                            <th>Username</th>
+                            <th>Password</th>
+                        </tr>
+                        <%for(var i=0; i < list.length; i++){%>
+                            <%var date = list[i].dob;%>
+                            <%var option = {year: "numeric", month: "short", day: "numeric"};%>
+                            <%var dob = date.toLocaleDateString('en-us',option);%>
+                            <tr>
+                                <td><%=list[i].id %></td>
+                                <td><%=list[i].firstName %></td>
+                                <td><%=list[i].lastName %></td>
+                                <td><%=dob %></td>
+                                <td><%=list[i].gender %></td>
+                                <td><%=list[i].email %></td>
+                                <td><%=list[i].userName %></td>
+                                <td><%=list[i].pasword %></td>
+                            </tr>
+                        <%}%>
+                    </table>
+                </div>
+            <%}%>
+            
+        </section>
+    </body>
+</html>

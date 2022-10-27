@@ -1,0 +1,88 @@
+body{
+    overflow: hidden;
+}
+
+/*intro section css designing*/
+
+#intro-section{
+    padding: 40px 60px;
+    background-color: #704F4F;
+    height: 250px;
+}
+#kh {
+    height: 100px;
+    width: 85px;
+    margin-right: 20px;
+}
+
+.navbar-brand{
+    position: absolute;
+    font-size: 50px;
+    left: 140px;
+    top: 22px;
+    font-family: 'Cairo', sans-serif;
+}
+
+#navbar-brand-small{
+    color: #fafafa;
+    font-family: 'Cairo', sans-serif;
+    position: absolute;
+    font-size: 16px;
+    left: 140px;
+    top: 50px;
+}
+
+h1{
+    text-align: center;
+    padding: 20px 60px;
+    font-family: 'Satisfy', cursive;
+    color: #fff;
+}
+
+h2{
+    text-align: center;
+    padding-top: 30px;
+}
+
+.success{
+    color: rgb(14, 206, 46);
+    font-size: 60px;
+}
+
+a{
+    color:#fff;
+    font-size: 18px;
+}
+
+.link1{
+    margin-right: 3px;
+}
+
+.link2{
+    margin-left: 3px;
+}
+
+/*body css designing*/
+
+#cond-trig1{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #e2ac41;
+}
+
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    text-align: center;
+}
+th,td {
+    background-color: #96D4D4;
+    padding: 6px;
+}

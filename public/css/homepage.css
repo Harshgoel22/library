@@ -1,0 +1,434 @@
+body {
+    background-color: #D7CEC7;
+    font-family: "ubuntu", sans-serif;
+    overflow-x: hidden;
+}
+
+.btn {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 15px;
+}
+
+
+
+
+
+/*-----------------------------------INTRO-SECTION---------------------------------------*/
+
+#kh {
+    height: 80px;
+    width: 75px;
+    margin-right: 20px;
+}
+
+#navbar-brand-small{
+    color: #fff;
+    font-family: 'Cairo', sans-serif;
+    position: absolute;
+    left: 165px;
+    top: 118px;
+}
+
+
+#intro-section{
+    background-color: #704F4F;
+}
+
+#intro-div{
+    text-align: center;
+    padding: 20px 60px;
+    font-family: 'Satisfy', cursive;
+}
+
+#intro-div h1 {
+    color: #fff;
+    font-size: 4rem;
+}
+
+#intro-div h1 span {
+    font-size: 12rem;
+    color: #fff;
+    animation: glow 500ms ease-in-out infinite alternate;
+}
+
+
+@keyframes glow {
+    33% {
+        text-shadow: 0 0 10px #FFFF00 
+    }
+
+    66%{
+        text-shadow: 0 0 20px #FFFF00 
+    }
+    99%{
+        text-shadow: 0 0 30px #FFFF00 
+    }
+}
+
+.intro-section .fa-solid {
+    font-size: 64px;
+}
+
+.navbar-brand{
+    font-size: 45px;
+    font-family: 'Cairo', sans-serif;
+}
+
+.navbar {
+    padding: 55px 60px 40px;
+    font-size: 20px;
+}
+
+
+.xpand {
+    border-radius: 50px;
+    font-size: 25px;
+    overflow: hidden;
+    transition: all 100ms ease-in-out;
+    display: inline-block;
+} 
+
+
+.xpand span {
+    max-width: 0;
+    transition: max-width 500ms;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.xpand:hover span {
+    max-width: 6rem;
+}
+
+
+
+
+
+
+/*-----------------------------------FEATURE-SECTION---------------------------------------*/
+
+
+
+
+.feature{
+    text-align: center;
+    padding: 5%;
+}
+
+#features{
+    text-align: center;
+    padding: 7% 15%;
+}
+
+.feature h3 {
+    font-weight: bold;
+}
+
+.feature p{
+    color: #8f8f8f;
+}
+
+
+#features .fa-solid {
+    font-size: 64px;
+    margin: 10%;
+    
+}
+
+
+
+
+
+
+/*-----------------------------------BESTSELLER-SECTION---------------------------------------*/
+
+
+.carousel-inner {
+    background-color: #704F4F;
+    text-align: center;
+    padding-top: 2%;
+    padding: 20px;
+}
+
+.carousel-inner p {
+    font-family: 'Satisfy', cursive;
+    font-size: 5rem;
+    color: #fff;
+}
+
+
+.bookcrsl {
+    height: 600px;
+    text-align: center;
+    padding: 3%;
+    border: #3C1321;
+    border-width: 1rem;
+}
+
+
+
+.bookcrsl button {
+    font-size: 2rem;
+    width: 340px;
+}
+#bk1 {
+    background-color: cadetblue;
+    color: rgb(0, 41, 36);
+}
+
+#bk2 {
+    background-color: lightskyblue;
+    color: darkblue;
+}
+
+#bk3 {
+    background-color: beige;
+    color: chocolate;
+}
+
+.bookcrsl table {
+    width: 100%;
+    height: 100%;
+}
+
+.bookimg {
+    width: 50%;
+}
+.bookdsc {
+    width: 50%;
+}
+
+.bookdsc h1{
+    
+    font-family: "cairo";
+    font-size: 5rem;
+}
+
+.bookimg img {
+    height: 500px;
+    width: 55%;
+}
+
+
+
+
+
+
+
+/*-----------------------------------CREATORS-SECTION---------------------------------------*/
+
+
+
+.crtr-nm{
+    font-size: 3rem;
+}
+
+.crtr-pic {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    border: 2px solid;
+}
+
+.crtr-lgo {
+    font-size: 2rem;
+    margin: 10px 10px;
+    color: black;
+}
+.fa-instagram:hover {
+    color: #DD2A7B;
+}
+
+.fa-linkedin:hover {
+    color: #0E76A8;
+}
+
+#crtr-hdng {
+    text-align: center;  
+    font-family: 'Dancing Script', cursive;
+    font-size: 7rem;
+}
+
+.crtr{
+    font-family: 'Dancing Script', cursive;
+}
+
+
+
+/*-----------------------------------FOOTER-SECTION---------------------------------------*/
+
+
+#footer {
+    background-color: #704F4F;
+    text-align: center;
+    color: #fff;
+    font-family: 'Abel', sans-serif;
+}
+
+
+
+/*-----------------------------------MODAL-SECTION-SIGNIN---------------------------------------*/
+
+.container-login {
+    margin: 15px;
+}
+
+.container-login #bks {
+    width: 100%;
+    height: 590px;
+}
+
+.container-login .form-control{
+    height: 50px;
+    width: 90%;
+    margin-left: 15px;
+}
+
+.form-check span {
+    margin-right: 40px;
+    margin-left: 5px;
+}
+
+.form-check-input {
+    height: 18px;
+    width: 18px;
+}
+
+#login-content {
+    text-align: center;
+    width: 40%;
+    padding: 15px;
+    
+}
+
+.toprt {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+#login-content h1 {
+    font-family: 'Cairo', sans-serif;
+    font-size: 60px;
+}
+
+.container-login .btn {
+    box-shadow: 0 10px 30px 0 #DAA06D;
+    width: 140px;
+    height: 50px;
+    background-image: linear-gradient(135deg,#E97451 60%,#A52A2A 90%, #800020 100%);
+    transition: transform 250ms;
+}
+
+.container-login .btn:hover {
+    animation: signinbtn 250ms ease-in-out alternate forwards;
+    transform: scale(1.15);
+}
+
+@keyframes signinbtn {
+    0%{
+        background-image: linear-gradient(135deg,#E97451 98%,#A52A2A 99%, #800020 100%);
+        
+    }
+
+    25%{
+        background-image: linear-gradient(135deg,#E97451 76%,#A52A2A 95%, #800020 100%);
+        
+    }
+
+    50%{
+        background-image: linear-gradient(135deg,#E97451 56%,#A52A2A 90%, #800020 100%);
+        
+    }
+
+    75%{
+        background-image: linear-gradient(135deg,#E97451 36%,#A52A2A 85%, #800020 100%);
+        
+    }
+
+    100%{
+        background-image: linear-gradient(135deg,#E97451 16%,#A52A2A 80%, #800020 100%);
+        
+    }
+}
+
+
+/*-----------------------------------MODAL-SECTION-SIGNUP---------------------------------------*/
+
+
+
+.container-signup {
+    margin: 15px
+    
+}
+
+#signup-content small{
+    font-size: small;
+}
+
+.container-signup #bks {
+    width: 100%;
+    height: 750px;
+}
+
+
+#signup-content {
+    width: 65%;
+    padding: 10px;
+    
+}
+
+#signup-content h3{
+    font-family: 'Cairo', sans-serif;
+    color: #800020;
+    text-shadow: 0 0 15px #E97451;
+}
+
+#signup-content h1 {
+    font-family: 'Cairo', sans-serif;
+    font-size: 60px;
+}
+
+.container-signup .btn {
+    box-shadow: 0 10px 30px 0 #DAA06D;
+    width: 140px;
+    height: 50px;
+    background-image: linear-gradient(135deg,#E97451 60%,#A52A2A 90%, #800020 100%);
+    transition: transform 200ms;
+    position: absolute; 
+    right: 25px;
+}
+
+.container-signup .btn:hover {
+    animation: signupbtn 200ms ease-in-out alternate forwards;
+    transform: scale(1.15);
+}
+
+@keyframes signupbtn {
+    0%{
+        background-image: linear-gradient(135deg,#E97451 98%,#A52A2A 99%, #800020 100%);
+        
+    }
+
+    25%{
+        background-image: linear-gradient(135deg,#E97451 76%,#A52A2A 95%, #800020 100%);
+        
+    }
+
+    50%{
+        background-image: linear-gradient(135deg,#E97451 56%,#A52A2A 90%, #800020 100%);
+        
+    }
+
+    75%{
+        background-image: linear-gradient(135deg,#E97451 36%,#A52A2A 85%, #800020 100%);
+        
+    }
+
+    100%{
+        background-image: linear-gradient(135deg,#E97451 16%,#A52A2A 80%, #800020 100%);
+        
+    }
+}
