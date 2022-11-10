@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+ 
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="../css/admin_homepage.css">
+    <!-- Icon JS -->
+    <script src="https://kit.fontawesome.com/4dce69f05e.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Cairo:wght@500&family=Cookie&family=Dancing+Script:wght@600&family=Satisfy&display=swap" rel="stylesheet">
+    <title>Admin homepage</title>
+    
+</head>
+
+<body>
+
+    <section id="intro-section">
+                
+
+        <!--navbar-->
+            <nav class="navbar navbar-expand-lg navbar-dark">
+
+                <img src="../images/Logo1.png" alt="_logo" id="kh">
+                <p class="navbar-brand">Knowledge Hub</p><br><br><br>
+                <small id="navbar-brand-small">by IIIT Sonepat</small>
+
+                <div id="navbar-nav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="/studentList" class="nav-link link1">See Student's List</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/list" class="nav-link link1">See User's List</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link link2">Manage Videos</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="account-col" style="text-align: center;">
+
+                    <button class="btn btn-outline-light btn-lg ac_circle"> 
+                        <i class="fa-solid" ><span><%= full_name[0] %></span></i>
+                    </button>
+                                                
+                    <div class="user_welcome">
+                        <p style="color: rgb(87, 204, 87);">Welcome, <%= full_name %> (Admin)</p>
+                    </div>
+                </div>
+
+            </nav>
+            <div id="intro-div">
+                <h1><span>Knowledge Hub</span> </h1><br>
+            </div>
+            
+    </section>
+
+    <section id="demanded_books">
+        <%if(list.length===0){%>
+            <h1 id="cond-trig1">No book demanded yet</h1>
+        <%}%>
+        <%if(list.length > 0){%>
+            <h1>Demanded Books</h1>
+            <div class="book-record">
+                <table>
+                    <tr>
+                        <th>Id</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Name of the Book</th>
+                        <th>Author's Name</th>
+                        <th>Resolve Issue</th>
+                    </tr>
+                    <%for(var i=0; i < list.length; i++){%>
+                        
+                        <tr>
+                            <td><%=list[i].id %></td>
+                            <td><%=list[i].firstname %></td>
+                            <td><%=list[i].lastname %></td>
+                            <td><%=list[i].bookname %></td>
+                            <td><%=list[i].authorname %></td>
+                            <td>
+                                <button class="btn btn-outline-light btn-lg xpand" data-toggle="modal" data-target="#signinmodal"> 
+                                    <i class="fa-solid"></i> <span>Resolve</span>
+                                </button>
+                                <!--Modal start-->
+                                <div class="modal fade" id="signinmodal">
+                                    <div class="modal-dialog modal-dialog-centered modal-xl" style="height: 600px;width: 1300px;">
+                                        <div class="modal-content">
+                                            <div class="container-login">
+                                                <table>
+                                                    <tr>
+                                                        <td id="book-resolve-content">
+                                                            <button class="close toprt" data-dismiss="modal">
+                                                                <span>&times;</span>
+                                                            </button>
+                                                            <h1>Resolve Issue</h1>
+                                                            <form action="/postbook" method="post">
+                                                                <div class="form-group col">
+                                                                    <small>Image Url:</small>
+                                                                    <input type="text" class="form-control" id="imgurl" name="imgurl" placeholder="Image Url">
+                                                                </div>
+                                                                <div class="form-group col">
+                                                                    <small>Book Title:</small>
+                                                                    <input type="text" class="form-control" id="book_title" name="booktitle" placeholder="Book's Title">
+                                                                </div>  
+                                                                <div class="form-group col">
+                                                                    <small>Book Text:</small>
+                                                                    <input type="text" class="form-control" id="book_text" name="booktext" placeholder="Book's Text">
+                                                                </div>
+                                                                <div class="form-group col">
+                                                                    <small>Book Url:</small>
+                                                                    <input type="text" class="form-control" id="book_url" name="bookurl" placeholder="Book's Url">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <button class="btn btn-outline-dark btn-lg ml-auto" name="id" value="<%= list[i].id %>" >Resolve</button>
+                                                                </div>  
+                                                            </form>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>                                        
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Modal-end-->
+                            </td>
+                        </tr>
+                    <%}%>
+                </table>
+            </div>
+        <%}%>
+    </section>
+
+    <section id="footer">
+        
+        ⓒ Copyright 2022. All rights reserved.
+        <br><br><br>
+    </section>
+    
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="homepage.js"></script>
+</body>
+
+</html>

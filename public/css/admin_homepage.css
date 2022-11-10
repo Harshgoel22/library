@@ -1,0 +1,182 @@
+body {
+    background-color: #D7CEC7;
+    font-family: "ubuntu", sans-serif;
+    overflow-x: hidden;
+}
+
+.btn {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 15px;
+}
+
+
+
+
+
+/*-----------------------------------INTRO-SECTION---------------------------------------*/
+
+#kh {
+    height: 80px;
+    width: 75px;
+    margin-right: 20px;
+}
+
+#navbar-brand-small{
+    color: #fff;
+    font-family: 'Cairo', sans-serif;
+    position: absolute;
+    left: 165px;
+    top: 140px;
+}
+
+
+#intro-section{
+    background-color: #704F4F;
+}
+
+#intro-div{
+    text-align: center;
+    padding: 20px 60px;
+    font-family: 'Satisfy', cursive;
+}
+
+#intro-div h1 {
+    color: #fff;
+    font-size: 4rem;
+}
+
+#intro-div h1 span {
+    font-size: 12rem;
+    color: #fff;
+    animation: glow 500ms ease-in-out infinite alternate;
+}
+
+
+@keyframes glow {
+    33% {
+        text-shadow: 0 0 10px #FFFF00 
+    }
+
+    66%{
+        text-shadow: 0 0 20px #FFFF00 
+    }
+    99%{
+        text-shadow: 0 0 30px #FFFF00 
+    }
+}
+
+.intro-section .fa-solid {
+    font-size: 64px;
+}
+
+.navbar-brand{
+    font-size: 45px;
+    font-family: 'Cairo', sans-serif;
+}
+
+.navbar {
+    padding: 55px 60px 40px;
+    font-size: 20px;
+}
+
+
+.xpand {
+    border-radius: 50px;
+    font-size: 25px;
+    overflow: hidden;
+    transition: all 100ms ease-in-out;
+    display: inline-block;
+} 
+
+
+.xpand span {
+    max-width: 0;
+    transition: max-width 500ms;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.xpand:hover span {
+    max-width: 6rem;
+}
+
+#navbar-nav{
+    position:absolute;
+    left: 600px;
+}
+
+.nav-item{
+    margin: 5px;
+    padding: 7px;
+}
+
+.ac_circle{
+    background-color: #fff;
+    color: black;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    border-width: 2px;
+    border-color: #fff;
+}
+
+.account-col{
+    margin-left: 700px;
+}
+
+/*-----------------------------------DEMANDED BOOKS SECTION-------------------------------*/
+
+#demanded_books{
+    background-color:#D7CEC7;
+}
+
+
+/*-----------------------------------FOOTER-SECTION---------------------------------------*/
+
+
+#footer {
+    background-color: #704F4F;
+    text-align: center;
+    color: #fff;
+    font-family: 'Abel', sans-serif;
+}
+
+/*----------------------------DEMANDED BOOKS SECTION------------------------------------*/
+/*body css designing*/
+
+#demanded_books{
+    min-height: 150px;
+}
+
+#demanded_books h1{
+    font-weight: bold;
+    color: #2e2209;
+    text-align: center;
+}
+
+#cond-trig1{
+    text-align: center;
+    padding-top: 25px;
+    font-size: 44px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #2e2209;
+}
+
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+th,td {
+    background-color: #96D4D4;
+    padding: 6px;
+}

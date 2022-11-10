@@ -26,7 +26,7 @@ body {
     font-family: 'Cairo', sans-serif;
     position: absolute;
     left: 165px;
-    top: 118px;
+    top: 130px;
 }
 
 
@@ -102,160 +102,68 @@ body {
     max-width: 6rem;
 }
 
-#sgn-btn{
+.ac_circle{
+    background-color: #fff;
+    color: black;
     height: 50px;
-    width: 80px;
+    width: 50px;
+    border-radius: 50px;
+    border-width: 2px;
+    border-color: #fff;
 }
-
-/*-----------------------------------FEATURE-SECTION---------------------------------------*/
-
-
-
-
-.feature{
-    text-align: center;
-    padding: 5%;
-}
-
-#features{
-    text-align: center;
-    padding: 7% 15%;
-}
-
-.feature h3 {
-    font-weight: bold;
-}
-
-.feature p{
-    color: #8f8f8f;
-}
-
-
-#features .fa-solid {
-    font-size: 64px;
-    margin: 10%;
-    
-}
-
-
-
-
 
 
 /*-----------------------------------BESTSELLER-SECTION---------------------------------------*/
 
 
-.carousel-inner {
-    background-color: #704F4F;
+.dashboard {
+    background-color: #D7CEC7;
     text-align: center;
     padding-top: 2%;
     padding: 20px;
 }
 
-.carousel-inner p {
-    font-family: 'Satisfy', cursive;
-    font-size: 5rem;
-    color: #fff;
+.dashboard p{
+    font-size: 30px;
+    color: rgb(185, 95, 39);
 }
 
-
-.bookcrsl {
-    height: 600px;
-    text-align: center;
-    padding: 3%;
-    border: #3C1321;
-    border-width: 1rem;
+.dashboard{
+    margin-left: 200px;
 }
 
+.books-section{
+    margin: 7px 15px;
 
-
-.bookcrsl button {
-    font-size: 2rem;
-    width: 340px;
-}
-#bk1 {
-    background-color: cadetblue;
-    color: rgb(0, 41, 36);
 }
 
-#bk2 {
-    background-color: lightskyblue;
-    color: darkblue;
+.card{
+    margin: 7px 20px;
+    padding: 10px;
 }
 
-#bk3 {
-    background-color: beige;
-    color: chocolate;
+.card img{
+    height: 350px;
 }
 
-.bookcrsl table {
-    width: 100%;
-    height: 100%;
+.card p{
+    font-size: 14px;
+    color: rgb(163, 157, 157);
+    padding: 5px;
 }
 
-.bookimg {
-    width: 50%;
-}
-.bookdsc {
-    width: 50%;
+.card h5{
+    font-weight: bold;
+    font-size: 20px;
 }
 
-.bookdsc h1{
-    
-    font-family: "cairo";
-    font-size: 5rem;
+.card-body{
+    padding: 12px;
 }
 
-.bookimg img {
-    height: 500px;
-    width: 55%;
+.card-body a{
+    margin-top: 0px;
 }
-
-
-
-
-
-
-
-/*-----------------------------------CREATORS-SECTION---------------------------------------*/
-
-
-
-.crtr-nm{
-    font-size: 3rem;
-}
-
-.crtr-pic {
-    height: 250px;
-    width: 250px;
-    border-radius: 50%;
-    border: 2px solid;
-}
-
-.crtr-lgo {
-    font-size: 2rem;
-    margin: 10px 10px;
-    color: black;
-}
-.fa-instagram:hover {
-    color: #DD2A7B;
-}
-
-.fa-linkedin:hover {
-    color: #0E76A8;
-}
-
-#crtr-hdng {
-    text-align: center;  
-    font-family: 'Dancing Script', cursive;
-    font-size: 7rem;
-}
-
-.crtr{
-    font-family: 'Dancing Script', cursive;
-}
-
-
 
 /*-----------------------------------FOOTER-SECTION---------------------------------------*/
 
@@ -355,100 +263,3 @@ body {
 }
 
 
-/*-----------------------------------MODAL-SECTION-SIGNUP---------------------------------------*/
-
-#stID {
-    display: none;
-}
-
-.container-signup {
-    margin: 15px
-    
-}
-
-#signup-content small{
-    font-size: small;
-}
-
-.container-signup #bks {
-    width: 100%;
-    height: 750px;
-}
-
-
-#signup-content {
-    width: 65%;
-    padding: 10px;
-    
-}
-
-#signup-content h3{
-    font-family: 'Cairo', sans-serif;
-    color: #800020;
-    text-shadow: 0 0 15px #E97451;
-}
-
-#signup-content h1 {
-    font-family: 'Cairo', sans-serif;
-    font-size: 60px;
-}
-
-.container-signup .btn {
-    box-shadow: 0 10px 30px 0 #DAA06D;
-    width: 140px;
-    height: 50px;
-    background-image: linear-gradient(135deg,#E97451 60%,#A52A2A 90%, #800020 100%);
-    transition: transform 200ms;
-    position: absolute; 
-    right: 25px;
-}
-
-.container-signup .btn:hover {
-    animation: signupbtn 200ms ease-in-out alternate forwards;
-    transform: scale(1.15);
-}
-
-@keyframes signupbtn {
-    0%{
-        background-image: linear-gradient(135deg,#E97451 98%,#A52A2A 99%, #800020 100%);
-        
-    }
-
-    25%{
-        background-image: linear-gradient(135deg,#E97451 76%,#A52A2A 95%, #800020 100%);
-        
-    }
-
-    50%{
-        background-image: linear-gradient(135deg,#E97451 56%,#A52A2A 90%, #800020 100%);
-        
-    }
-
-    75%{
-        background-image: linear-gradient(135deg,#E97451 36%,#A52A2A 85%, #800020 100%);
-        
-    }
-
-    100%{
-        background-image: linear-gradient(135deg,#E97451 16%,#A52A2A 80%, #800020 100%);
-        
-    }
-}
-
-/*------------------------------------FORGET PASSWORD-----------------------------------*/
-
-#pass-btn{
-    margin-top: 28px;
-    padding: 5px;
-    height: 64px;
-    width: 115px;
-}
-
-.my-btn{
-    padding: 6px;
-}
-
-.my-btn span{
-    font-size: 14px;
-    padding: 4px;
-}

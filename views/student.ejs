@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- Local CSS -->
+        <link rel="stylesheet" href="../css/user_homepage.css">
+        <!-- Icon JS -->
+        <script src="https://kit.fontawesome.com/4dce69f05e.js" crossorigin="anonymous"></script>
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Abel&family=Cairo:wght@500&family=Cookie&family=Dancing+Script:wght@600&family=Satisfy&display=swap" rel="stylesheet">
+        <title>student homepage</title>
+        
+    </head>
+    
+    <body>
+    
+        <section id="intro-section">
+                    
+    
+            <!--navbar-->
+                <nav class="navbar navbar-expand-lg navbar-dark">
+                    
+                    <img src="../images/Logo1.png" alt="_logo" id="kh">
+                    <p class="navbar-brand">Knowledge Hub</p><br><br><br><br>
+                    <small id="navbar-brand-small">by IIIT Sonepat</small>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <button class="btn btn-outline-light btn-lg xpand" data-toggle="modal" data-target="#signinmodal"> 
+                                    <i class="fa-solid"></i> <span>Demand</span>
+                                </button>
+                                <!--Modal start-->
+                                <div class="modal fade" id="signinmodal">
+                                    <div class="modal-dialog modal-dialog-centered modal-xl" style="height: 600px;width: 1300px;">
+                                        <div class="modal-content">
+                                            <div class="container-login">
+                                                <table>
+                                                    <tr>
+                                                        <td id="login-content">
+                                                            <button class="close toprt" data-dismiss="modal">
+                                                                <span>&times;</span>
+                                                            </button>
+                                                            <h1>Demand Book</h1>
+                                                        
+                                                            <form action="/admin" method="post">
+                                                                <div class="form-group col">
+                                                                    <small>Name of the Book:</small>
+                                                                    <input type="text" class="form-control" id="bname" name="bname" placeholder="Book's Name">
+                                                                </div>
+                                                                <div class="form-group col">
+                                                                    <small>Book's Author:</small>
+                                                                    <input type="text" class="form-control" id="baname" name="baname" placeholder="Book's Author Name">
+                                                                </div>  
+                                                                <div class="form-group">
+                                                                    <button class="btn btn-outline-dark btn-lg ml-auto name" name="data" value="<%= full_name + ' ' + id_value %>">Demand</button>
+                                                                </div>  
+                                                            </form>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>                                        
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Modal-end-->
+                            </li>
+                            <li class="nav-item">
+                                <form action="/video" method="get">
+                                    <button class="btn btn-outline-light btn-lg xpand" data-toggle="modal"> 
+                                        </i> <span>Videos</span>
+                                    </button>
+                                </form>
+                            </li>     
+                            <li class="nav-item">
+                                <form action="/notes" method="get">
+                                    <button class="btn btn-outline-light btn-lg xpand" data-toggle="modal"> 
+                                        </i> <span>Notes</span>
+                                    </button>
+                                </form>
+                            </li>                
+                        </ul>
+                    </div>  
+
+                    <div class="account-col" style="text-align: center;">
+
+                        <button class="btn btn-outline-light btn-lg ac_circle"> 
+                            <i class="fa-solid" ><span><%= full_name[0] %></span></i>
+                        </button>
+                                                    
+                        <div class="user_welcome">
+                            <p style="color: rgb(87, 204, 87);">Welcome, <%= full_name %> (Student)</p>
+                        </div>
+                    </div>
+                    
+                </nav>
+                <div id="intro-div">
+                    <h1>Welcome to our Library <br> <span>Knowledge Hub</span> </h1><br>
+                </div>
+                
+        </section>
+    
+        <section id="bestseller">
+            <div class="dashboard">
+                <p style="text-align: center;">Mostly visited Books !!</p>
+                <div class="books-section">
+                    <div class="row">
+                        <div class="card col-lg-3 col-md-4">
+                            <img src="../images/DOWK_RR.jpg" alt="" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Diary of a Wimpy Kid</h5>
+                                <p class="card-text">Diary of a Wimpy Kid is an American children's book series and media franchise created by author and cartoonist Jeff Kinney</p>
+                                <a href="" class="btn btn-primary">Click to proceed</a>
+                            </div>
+                        </div>
+                        <div class="card col-lg-3 col-md-4">
+                            <img src="../images/IOM.jpg" alt="" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">The Immortals of Meluha</h5>
+                                <p class="card-text">The Immortals of Meluha is the first book of Amish Tripathi, first book of Amishverse, and also the first book of Shiva Trilogy. </p>
+                                <a href="" class="btn btn-primary">Click to proceed</a>
+                            </div>
+                        </div>
+                        <div class="card col-lg-3 col-md-4">
+                            <img src="../images/TN.jpg" alt="" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">The Notebook</h5>
+                                <p class="card-text">The Notebook is a 1996 romantic novel by American novelist Nicholas Sparks.</p>
+                                <a href="" class="btn btn-primary">Click to proceed</a>
+                            </div>
+                        </div>
+                        <%for(var i=0; i < list.length; i++){%>
+                            <div class="card col-lg-3 col-md-4">
+                                <img src= "<%= list[i].imgurl %>" alt="" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title"><%= list[i].booktitle %></h5>
+                                    <p class="card-text"><%= list[i].booktext %></p>
+                                    <a href="<%= list[i].bookurl %>" class="btn btn-primary">Click to proceed</a>
+                                </div>
+                            </div>
+                        <%}%>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section id="footer">
+            <br><br><br>
+            This website is created by Sameer, Abhinav and Harsh. We are students of IT branch, 3rd Semester in IIIT Sonepat institute. <br> 
+            If you wish to contact us for any issue related to our website, you can contact us on this Gmail ID: <a href="mailto:practicum.team3@gmail.com">practicum.team3@gmail.com</a>
+            <br><br>
+            Provide us your valuable Feedback <a href="#">here</a> 
+            <br><br>
+            ⓒ Copyright 2022. All rights reserved.
+            <br><br><br>
+        </section>
+        
+    
+    
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <script src="homepage.js"></script>
+    </body>
+</html>

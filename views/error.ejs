@@ -45,11 +45,7 @@
                    
         </section>
         <section id="content">
-            <%if(validLogin){%>
-                <h1 class="success">Welcome back! <%= full_name %></h1>
-            <%}if(succ){%>
-                <h1 class="success">Registered Successfully!</h1>
-            <%}if(check_nully){%>
+            <%if(check_nully){%>
                 <h2>Sorry! You have left any of the blank empty.</h2>
             <%}if(check_pass){%>
                 <h2>Sorry! You have entered wrong password.</h2>

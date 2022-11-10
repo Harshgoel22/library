@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>User's list</title>
+        <title>list</title>
 
         <!--local css files-->
         <link rel="stylesheet" href="/css/list.css">
@@ -41,7 +41,7 @@
                 </nav>
                 
                 <div id="intro-div">
-                    <h1>Registered Users List</h1>
+                    <h1>Registered Students List</h1>
                 </div>
                    
         </section>
@@ -49,13 +49,14 @@
         <section id="list">
 
             <%if(list.length===0){%>
-                <h1 id="cond-trig1">No Registered User</h1>
+                <h1 id="cond-trig1">No Registered Students</h1>
             <%}%>
             <%if(list.length > 0){%>
                 <div class="user-record">
                     <table>
                         <tr>
                             <th>Id</th>
+                            <th>Student Id</th>
                             <th>First Name</th>
                             <th>Last Name</th>
                             <th>Date of Birth</th>
@@ -65,18 +66,19 @@
                             <th>Password</th>-->
                         </tr>
                         <%for(var i=0; i < list.length; i++){%>
-                            <%var date = list[i].dob;%>
+                            <%var date = list[i].SDateOfBirth;%>
                             <%var option = {year: "numeric", month: "short", day: "numeric"};%>
                             <%var dob = date.toLocaleDateString('en-us',option);%>
                             <tr>
-                                <td><%=list[i].id %></td>
-                                <td><%=list[i].firstName %></td>
-                                <td><%=list[i].lastName %></td>
-                                <td><%=dob %></td>
-                                <td><%=list[i].gender %></td>
-                                <td><%=list[i].email %></td>
-                                <!--<td><%=list[i].userName %></td>
-                                <td><%=list[i].pasword %></td>-->
+                                <td><%=list[i].khId %></td>
+                                <td><%=list[i].StudentID%></td>
+                                <td><%=list[i].Sfname %></td>
+                                <td><%=list[i].Slname %></td>
+                                <td><%=dob%></td>
+                                <td><%=list[i].SGender %></td>
+                                <td><%=list[i].Semail %></td>
+                                <!--<td><%=list[i].Susername %></td>
+                                <td><%=list[i].Spassword %></td>-->
                             </tr>
                         <%}%>
                     </table>

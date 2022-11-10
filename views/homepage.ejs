@@ -56,7 +56,7 @@
                                                             <span>&times;</span>
                                                         </button>
                                                         <h1>Login</h1>
-                                                        <p>Don't have an account? <a href="#"> Sign Up</a> already <br> in less than a minute!</p><br>
+                                                        <p>Don't have an account? <button type="button" class="btn btn-sm btn-outline-dark" id="sgn-btn" data-toggle="modal" data-target="#signupmodal">Sign Up</button> already <br> in less than a minute!</p><br>
                                                         
                                                         <form action="/post" method="post">
                                                             <div class="form-group">
@@ -68,10 +68,62 @@
                                                                 <input type="text" class="form-control" name="username" id="username" placeholder="Username"><br>
                                                                 <input type="password" class="form-control" name="password" id="password" placeholder="Password">
 
-                                                                <br><br><a href="" id="frgtme">Forget Password?</a><br><br>
+                                                                <br><br>
                                                                 <button class="btn btn-outline-dark btn-lg">Login</button>
                                                             </div>                                                            
                                                         </form>
+                                                        
+                                                        <!--modal start-->
+                                                        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                                                            <ul class="navbar-nav ml-auto">
+                                                                <li class="nav-item">
+                                                                    <button class="btn btn-outline-light btn-lg my-btn" data-toggle="modal" data-target="#forgetmodal"> 
+                                                                        <span>Forget Password?</span>
+                                                                    </button>
+                                                                    <!--Modal start-->
+                                                                    <div class="modal fade" id="forgetmodal">
+                                                                        <div class="modal-dialog modal-dialog-centered modal-xl" style="height: 600px;width: 1300px;">
+                                                                            <div class="modal-content">
+                                                                                <div class="container-login">
+                                                                                    <table>
+                                                                                        <tr>
+                                                                                            <td>
+                                                                                                <img src="../images/bks.jpg" alt="bks" id="bks">
+                                                                                            </td>
+                                                                                            <td id="login-content">
+                                                                                                <button class="close toprt" data-dismiss="modal">
+                                                                                                    <span>&times;</span>
+                                                                                                </button>
+                                                                                                <h1>Change Password</h1>
+                                                                                                <br>
+                                                                                                
+                                                                                                <form action="/forget" method="post">
+                                                                                                    <div class="form-group">
+                                                                                                        <div class="form-check form-check-inline">
+
+                                                                                                            <input class="form-check-input" type="radio" name="member" id="user" value="user"><Span>User</Span>
+                                                                                                            <input class="form-check-input" type="radio" name="member" id="student" value="student"><Span>Student</Span>
+                                                                                                            
+                                                                                                        </div><br><br>
+                                                                                                        <input type="text" class="form-control" name="username" id="username" placeholder="Username"><br>
+                                                                                                        <input type="text" class="form-control" name="email" id="email" placeholder="Email"><br>
+                                                                                                        <input type="password" class="form-control" name="repassword" id="repassword" placeholder="Reset Password"><br>
+                                                                                                        <input type="password" class="form-control" name="con_repassword" id="con_repassword" placeholder="Confirm Reset Password">
+                                                                                                        
+                                                                                                        <button class="btn btn-outline-dark btn-lg" id="pass-btn" >Change Password</button>
+                                                                                                    </div>                                                            
+                                                                                                </form>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </div>                                        
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <!--modal end-->
                                                     </td>
                                                 </tr>
                                             </table>
@@ -103,6 +155,17 @@
                                                         <h1>Create New Account</h1>
                                                         <form action="/list" method="post">
                                                             <div class="form-row">
+                                                                <div class="form-group col-lg-12" id="roleRB">
+                                                                    <small>Chose your Role:</small><br>
+                                                                    <div class="form-check form-check-inline">
+                                                                        <input class="form-check-input" type="radio" name="Role" id="user" value="user" onclick="invisible(0)"><Span>User</Span>
+                                                                        <input class="form-check-input" type="radio" name="Role" id="student" value="student" onclick="invisible(1)"><Span>Student</Span>                                
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group col-lg-6" id="stID">
+                                                                    <small>Student ID:</small>
+                                                                    <input type="text" class="form-control" name="stdID" id="sID" placeholder="Student ID">
+                                                                </div>
                                                                 <div class="form-group col-lg-6">
                                                                   <small>First Name:</small>
                                                                   <input type="text" class="form-control" id="fname" name="fname" placeholder="First Name">
@@ -302,6 +365,20 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="homepage.js"></script>
+    <script>
+        function invisible(ch){
+            if(ch===1){
+                $("#stID").css("display","block");
+                $("#roleRB")[0].classList.remove("col-lg-12");
+                $("#roleRB")[0].classList.add("col-lg-6");
+
+            }
+            else{
+                $("#stID").css("display","none");
+                $("#roleRB")[0].classList.add("col-lg-12");
+            }
+        }
+    </script>
 </body>
 
 </html>
